@@ -5,8 +5,8 @@ class RiddlesController < ApplicationController
   end
 
   def show
-    @riddle = Riddle.find(params[:id])
-    render json: @forest
+    @riddle = Riddle.find(params[:id].to_i)
+    render json: @riddle
   end
 
   def create
